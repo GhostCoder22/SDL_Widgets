@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SDL Widgets" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Windows 64-bit">
+				<Option output="../../bin/win64/SDL_Widgets" imp_lib="../../lib/x64/libSDL_Widgets.a" def_file="../../lib/x64/libSDL_Widgets.def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../obj/x64" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c11" />
+					<Add option="-m64" />
+					<Add option="-DBUILDLIB" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+				</Linker>
+			</Target>
+			<Target title="Windows 32-bit">
+				<Option output="../../bin/win32/SDL_plus" imp_lib="../../lib/x32/libSDL_plus.a" def_file="../../lib/x32/libSDL_plus.def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../../obj/x32" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="SDLW_test">
+				<Option output="../../bin/win64/SDLW_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../obj/x64" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Linker>
+					<Add library="../../lib/x64/libSDL_Widgets.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=gnu++11" />
+			<Add option="-std=c++11" />
+			<Add option="-D__WIN32__" />
+			<Add option="-DWINDOWS" />
+			<Add directory="../../contrib/SDL2/include" />
+			<Add directory="../../include" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libstdc++" />
+			<Add option="-static-libgcc" />
+			<Add option="--verbose" />
+		</Linker>
+		<Unit filename="../../include/SDL_Widgets.h" />
+		<Unit filename="../../include/SDL_Widgets/SDLW_kernel.h" />
+		<Unit filename="../../source/SDLW_internels.h">
+			<Option target="Windows 64-bit" />
+			<Option target="Windows 32-bit" />
+		</Unit>
+		<Unit filename="../../source/SDLW_kernel.c">
+			<Option compilerVar="CC" />
+			<Option target="Windows 64-bit" />
+			<Option target="Windows 32-bit" />
+		</Unit>
+		<Unit filename="../../tests/source/SDLW_test.c">
+			<Option compilerVar="CC" />
+			<Option target="SDLW_test" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
