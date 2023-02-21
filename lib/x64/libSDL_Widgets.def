@@ -1,0 +1,24 @@
+EXPORTS
+    SDLW_CallWidgetProc @1
+    SDLW_ClearError @2
+    SDLW_CreateWidget @3
+    SDLW_DestroyWidget @4
+    SDLW_ErrorToString @5
+    SDLW_ErrorToStringEx @6
+    SDLW_GetAppName @7
+    SDLW_GetClassInfo @8
+    SDLW_GetDeviceContext @9
+    SDLW_GetError @10
+    SDLW_GetWidgetClass @11
+    SDLW_GetWidgetID @12
+    SDLW_GetWidgetInfo @13
+    SDLW_GetWidgetParent @14
+    SDLW_Init @15
+    SDLW_QueryDeviceContext @16
+    SDLW_Quit @17
+    SDLW_RegisterClass @18
+    SDLW_SetClassInfo @19
+    SDLW_SetDeviceContext @20
+    SDLW_SetError @21
+    SDLW_UnregisterClass @22
+    SDLW_WasInit @23
