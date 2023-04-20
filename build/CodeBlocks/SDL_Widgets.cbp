@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SDL_Widgets" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Win64">
+				<Option output="../../bin/SDL_Widgets" imp_lib="../../lib/libSDL_Widgets.a" def_file="../../lib/libSDL_Widgets.def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../obj" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m64" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add library="../../../../../share/lib/libSDL2.dll.a" />
+				</Linker>
+			</Target>
+			<Target title="Win32">
+				<Option output="../../bin32/SDL_Widgets" imp_lib="../../lib32/libSDL_Widgets.a" def_file="../../lib32/libSDL_Widgets.def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../obj32" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c11" />
+					<Add option="-m64" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add library="../../../../../share/lib32/libSDL2.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-fomit-frame-pointer" />
+			<Add option="-O3" />
+			<Add option="-Wall" />
+			<Add option="-std=c17" />
+			<Add option="-DWINDOWS" />
+			<Add option="-D__WIN32__" />
+			<Add option="-DBUILDLIB" />
+			<Add directory="../../../../../share/include" />
+			<Add directory="../../include" />
+		</Compiler>
+		<Linker>
+			<Add option="-static-libgcc" />
+			<Add option="--verbose" />
+		</Linker>
+		<Unit filename="../../include/SDL_Widgets.h" />
+		<Unit filename="../../include/SDL_Widgets/SDLW_defines.h" />
+		<Unit filename="../../include/SDL_Widgets/SDLW_error.h" />
+		<Unit filename="../../include/SDL_Widgets/SDLW_kernel.h" />
+		<Unit filename="../../source/SDLW_error.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../source/SDLW_internals.h" />
+		<Unit filename="../../source/SDLW_kernel.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

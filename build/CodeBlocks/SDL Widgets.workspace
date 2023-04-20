@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="SDL Widgets">
+		<Project filename="SDL_Widgets.cbp" />
+		<Project filename="SDLW_Tests/test_SDLW_WidgetText.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
